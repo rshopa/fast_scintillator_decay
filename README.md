@@ -8,3 +8,4 @@ In case of fast scintillators like BaF<sub>2</sub>, luminescence decay is quick,
 
 >The simplest model, describing luminescence decay kinetics (time dependence of intensity) in 'classical' scintillator, is exponential *f(t) = I<sub>0</sub> exp<sup>(-t/t<sub>0</sub>)</sup>*. By using nonlinear fitting (regression) or Fourier transformation tools, we calculate the 'true' decay kinetics *f(t)*.
 
+https://github.com/rshopa/fast_scintillator_decay/files/25772/Poster.pdf
