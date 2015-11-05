@@ -2,7 +2,7 @@ import numpy as np
 
                 # genfromtxt,fft,conj,log,isnan,
 
-data = np.genfromtxt('e:/Roman/Optic/Lumi_Math/LumiMathPy/BaF2_48_44.dat')
+data = np.genfromtxt('BaF2_48_44.dat')
 
 t = data[:,0]         # time - t
 y_n = data[:,1]       # output signal - y(t)
@@ -29,7 +29,7 @@ for i in range(len(lambdas)):
 #-----------------------------------------------------------------------
 # write results in a .dat file
                 
-file1=open('e:/Roman/Optic/Lumi_Math/LumiMathPy/Conv_h48-h112_fft.dat','w')
+file1=open('Output_h48-h112_fft.dat','w')
 file1.write('t'+'\t'+'f1'+'\t'+'f2'+'\t'+'f3'+'\t'+'f4'+'\n')
 
                 # file with results, header and data for 4 lambdas [1-4]
@@ -73,7 +73,7 @@ f_fit=np.log(f[3][i_fit])
 
 theta,err = polyfit(t_fit[~np.isnan(f_fit)],f_fit[~np.isnan(f_fit)],1,cov=True)
                             #-----------------------------------
-                            # NaN elements are deing excluded
+                            # NaN elements are being excluded
 
 SD = np.sqrt(sum(((np.polyval(theta,t_fit)-f_fit)**2)[~np.isnan(f_fit)]/len(f_fit[~np.isnan(f_fit)])))
 
