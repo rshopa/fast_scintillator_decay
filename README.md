@@ -1,6 +1,6 @@
 # Decay kinetics in fast scintillators
 
-This is an attempt to evaluate the decay kinetic constant of the luminescence of BaF<sub>2</sub> nanoparticles upon high-energy X-ray excitation.
+This is an attempt to evaluate the decay kinetic constant for the integral luminescence of BaF<sub>2</sub> nanoparticles upon high-energy X-ray excitation.
 
 In measurements of time properties of luminescence, a rapid impulse of X-ray radiation is being generated to irradiate the scintillator, which emits light. The time dependence of its intensity is being measured as the output signal. Since the duration of emitted luminescence is relatively long, while the excitation impulse is negligible, nearly delta-like signal, the output might be considered as a 'pure' decay kinetics of the scintillator.
 
