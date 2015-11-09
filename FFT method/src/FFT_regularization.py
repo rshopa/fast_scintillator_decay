@@ -1,10 +1,10 @@
-import sys
+import sys,numpy as np
+
 from matplotlib.pyplot import *
 from pylab import polyfit
 
+#-------------------------------------------------------------------               
 def main():
-
-    import numpy as np
 
     data = np.genfromtxt(sys.argv[1])
 
@@ -42,7 +42,6 @@ def main():
         file1.write(str(t[k])+'\t'+str(f[1][k])+'\t'+str(f[2][k])+'\t'+str(f[3][k])+'\t'+str(f[4][k])+'\n')
     file1.close()
 
-    
                          # a plot with 4 different
                          # regularization steps
 
@@ -107,14 +106,14 @@ def main():
     hold('on')
     plot(t_fit,np.polyval(theta,t_fit),'--r')
     fill_between(t_fit,f_fit+SD,f_fit-SD,facecolor='cyan')
+
     title('Linear fit of f(t)')
     xlabel('time, ns')
     ylabel('Intensity, a.u.')
 
     show()
 
-#-----------------------------------------------------
+#-----------------------------------------------------------------------
 
 if __name__ == '__main__':
-        main()
-
+    main()
