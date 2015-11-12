@@ -1,0 +1,1 @@
+Decay kinetic constant t_0 = -0.942 +/- 0.014 nanoseconds
