@@ -12,7 +12,7 @@ def main():
     y_n = data[:,1]       # output signal - y(t)
     g = data[:,2]         # impulse signal - g(t)
 
-    Y = np.fft.fft(y_n)      # fast Fourier transforms
+    Y = np.fft.fft(y_n)      # fast Fourier transform
     G = np.fft.fft(g)        # for output and impulse (Y(w) and G(w))
 
     lambdas = [0, 1e4, 1e6, 1e8, 1e11] # 4 6 8 11
@@ -28,7 +28,7 @@ def main():
 
                     # Fourier transform of decay function
                     # and inverse Fourier transform of F
-                    # as an arrays for different regularizations
+                    # as an array for different regularizations
                      
     #-----------------------------------------------------------------------
     # write results in a .dat file
