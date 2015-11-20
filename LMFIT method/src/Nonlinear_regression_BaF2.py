@@ -156,16 +156,16 @@ def main():
     report_errors(provisional_parameters)
 
     print('\nBootstrapping report:\n\nI_0 =',"%.4f" % median(I_0),
-          '\t(+',"%.4f" % (100*((median(I_0)-err_I_0[0])/median(I_0))),
-          '% / -',"%.4f" % (100*((err_I_0[1]-median(I_0))/median(I_0))),'%)')
+          '\t(-',"%.4f" % (100*((median(I_0)-err_I_0[0])/median(I_0))),
+          '% / +',"%.4f" % (100*((err_I_0[1]-median(I_0))/median(I_0))),'%)')
 
                         # NOTE! since the statistical approach
                         # has been used, medians are more relevant
                         # instead of means
 
     print('t_0 =',"%.4f" % median(t_0),
-          '\t(+',"%.4f" % (100*((median(t_0)-err_t_0[0])/median(t_0))),
-          '% / -',"%.4f" % (100*((err_t_0[1]-median(t_0))/median(t_0))),'%)\n')
+          '\t(-',"%.4f" % (100*((median(t_0)-err_t_0[0])/median(t_0))),
+          '% / +',"%.4f" % (100*((err_t_0[1]-median(t_0))/median(t_0))),'%)\n')
 
     print('Runs test:\n\n Numbers of points:\n n_m =',nm,'\n n_p =',np,'\n\n'
           'Observed number of runs n_R =',nR,'\n'
