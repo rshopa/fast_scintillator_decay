@@ -4,7 +4,7 @@ from pylab import *
 from scipy import integrate, signal, stats
 from lmfit import minimize, Parameters, report_errors   #lmfit method
 
-import random           # must override numpy
+from numpy import random        # must override numpy (for random.choice)
 
 #------------------------functions-------------------------------------
 
@@ -31,7 +31,7 @@ def Conv_residuals(params,x,y,g):     # computes residuals
 def bootstrap(y,r):         # returns array with randomly sampled
                             # residuals added to y(t)
 	rnd = []
-	for z in random.sample(list(r),len(r)):
+	for z in random.choice(list(r),len(r),replace = True):
 		rnd.append(z)
 
 	return y + rnd
